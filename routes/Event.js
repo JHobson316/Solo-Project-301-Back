@@ -1,6 +1,6 @@
 const express = require("express")
-const mongoose = require("mongoose")
 const router = express.Router()
+const model = require("../models/model")
 
 const inMemoryDB = {};
 
@@ -23,5 +23,7 @@ router.get("/:id", (req, res) => {
 class Event{
     constructor(event){
         this.name = event.name;
+        this.date = event.date;
+        this.description = event.description;
     }
 }
